@@ -1,0 +1,94 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #7d7d7d, #1e90ff);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header, footer {
+  text-align: center;
+  padding: 20px;
+  background: #f4f4f4;
+}
+
+main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.calculator-card, .history-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  max-height: 400px;
+}
+.history-card {
+     overflow: auto;
+}
+
+.calculator-card:hover, .history-card:hover {
+  transform: translateY(-5px);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, select, button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  background: #1e90ff;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #005cbf;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.result {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #1e90ff;
+}
+
+#history {
+  list-style: none;
+  padding-left: 0;
+}
+
+#history li {
+  background: #f9f9f9;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 6px;
+  border-left: 4px solid #1e90ff;
+}
